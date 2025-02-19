@@ -1,10 +1,20 @@
-node_modules/
+# Node.js
+    /
+
+# npm
+npm-debug.log
+yarn-error.log
+.npm/
+package-lock.json
+yarn.lock
+
+# Tailwind CSS
 dist/
-coverage/
-.turbo
-test-results/
-playwright-report/
-blob-report/
-playwright/.cache/
-target/
-.debug
+.postcssrc.js
+tailwind.config.js
+
+# IDE
+.vscode/
+
+# Hidden files
+.DS_Store
