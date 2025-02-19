@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+@layer base {
+  @font-face {
+    font-family: "Estedad Black";
+    src: url(../fonts/Estedad/Estedad-Black.woff2), format("woff2"),
+      local("Estedad Black");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Estedad ExtraBold";
+    src: url(../fonts/Estedad/Estedad-ExtraBold.woff2), format("woff2"),
+      local("Estedad ExtraBold");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Estedad Bold";
+    src: url(../fonts/Estedad/Estedad-Bold.woff2), format("woff2"),
+      local("Estedad Bold");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Estedad SemiBold";
+    src: url(../fonts/Estedad/Estedad-SemiBold.woff2), format("woff2"),
+      local("Estedad SemiBold");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Estedad Medium";
+    src: url(../fonts/Estedad/Estedad-Medium.woff2), format("woff2"),
+      local("Estedad Medium");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Estedad Regular";
+    src: url(../fonts/Estedad/Estedad-Regular.woff2), format("woff2"),
+      local("Estedad Regular");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Estedad Light";
+    src: url(../fonts/Estedad/Estedad-Light.woff2), format("woff2"),
+      local("Estedad Light");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Estedad ExtraLight";
+    src: url(../fonts/Estedad/Estedad-ExtraLight.woff2), format("woff2"),
+      local("Estedad ExtraLight");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Estedad Thin";
+    src: url(../fonts/Estedad/Estedad-Thin.woff2), format("woff2"),
+      local("Estedad Thin");
+    font-display: swap;
+  }
+}
+
+@theme {
+  /* Primary Colors */
+  --color-Primary: #417f56;
+  --color-Tint-1: #e5f2e9;
+  --color-Tint-2: #cae4d3;
+  --color-Tint-3: #b0d7bd;
+  --color-Tint-4: #96c9a7;
+  --color-Tint-5: #7cbc91;
+  --color-Tint-6: #61ae7b;
+  --color-Tint-7: #4e9968;
+
+  /* Shade Color */
+  --color-Shade-1: #396f4b;
+  --color-Shade-2: #315f41;
+  --color-Shade-3: #294f36;
+  --color-Shade-4: #21402b;
+  --color-Shade-5: #183020;
+  --color-Shade-6: #102016;
+  --color-Shade-7: #08100b;
+
+  /* Neutral Colors */
+  --color-gray-100: #f9f9f9;
+  --color-gray-200: #e1e1e1;
+  --color-gray-300: #ededed;
+  --color-gray-400: #cbcbcb;
+  --color-gray-500: #adadad;
+  --color-gray-600: #757575;
+  --color-gray-700: #717171;
+  --color-gray-800: #353535;
+  --color-black: #0c0c0c;
+
+  /* Status Colors */
+  --color-Error: #c30000;
+  --color-Error-Light: #ed2e2e;
+  --color-Error-EXLight: #fff2f2;
+
+  --color-Success: #00966d;
+  --color-Success-Light: #00ba88;
+  --color-Success-EXLight: #f3fdfa;
+
+  --color-Warning: #a9791c;
+  --color-Warning-Light: #f4b740;
+  --color-Warning-EXLight: #fff8e1;
+
+  /* Box Shadows */
+  --shadow-1: 0px 2px 0px 2px rgba(0, 0, 0, 0.25);
+  --shadow-4: 0px 4px 0px 4px rgba(0, 0, 0, 0.25);
+  --shadow-6: 0px 6px 0px 6px rgba(0, 0, 0, 0.25);
+  --shadow-8: 0px 8px 0px 8px rgba(0, 0, 0, 0.25);
+  --shadow-12: 0px 12px 0px 12px rgba(0, 0, 0, 0.25);
+  --shadow-16: 0px 16px 0px 16px rgba(0, 0, 0, 0.25);
+
+  
+  /* Fonts */
+  --font-Estedad-Black: "Estedad Black";
+  --font-Estedad-ExtraBold: "Estedad ExtraBold";
+  --font-Estedad-Bold: "Estedad Bold";
+  --font-Estedad-SemiBold: "Estedad SemiBold";
+  --font-Estedad-Medium: "Estedad Medium";
+  --font-Estedad-Regular: "Estedad Regular";
+  --font-Estedad-Light: "Estedad Light";
+  --font-Estedad-ExtraLight: "Estedad ExtraLight";
+  --font-Estedad-Thin: "Estedad Thin";
+}
