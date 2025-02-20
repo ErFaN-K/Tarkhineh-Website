@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "swiper/css";
 
 @layer base {
 
@@ -117,6 +118,7 @@
 
   /* Remove 2x Breake Point */
   --breakpoint-2xl: initial;
+  --breakpoint-xs: 27.5rem;
 }
 
 @utility container {
@@ -136,5 +138,16 @@
     position: absolute;
     bottom: 0;
     background-color: #417F56;
+  }
+
+  .bg-hero {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.568) 50%, transparent 100%), url(../images/Hero-Background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .swiper-pagination-bullet-active { 
+    @apply md:!size-3 !size-2 !bg-Primary !m-0 
   }
 }

@@ -10,6 +10,8 @@
     <title>ترخینه | صفحه اصلی 🥗</title>
     <!-- Link App Style -->
     <link rel="stylesheet" href="styles/app.css">
+    <!-- Link Swiper Css -->
+    <link rel="stylesheet" href="../node_modules/swiper/swiper-bundle.min.css">
 </head>
 
 <body class="bg-white">
@@ -112,15 +114,21 @@
             <path stroke-linecap="round" stroke-linejoin="round"
                 d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
         </symbol>
-        <symbol id="bars-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <symbol id="bars-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </symbol>
-
+        <symbol id="rect-angle" width="154" height="33" viewBox="0 0 154 33" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M13.1492 12.9957C15.3255 5.56588 21.9046 0 29.6466 0H125.118C132.571 0 138.998 5.16164 141.261 12.2634C144.25 21.6506 148.867 33 153.711 33C161.97 33 -9.49755 33 0.41389 33C6.07606 33 10.4444 22.2302 13.1492 12.9957Z"
+                fill="white" />
+        </symbol>
     </svg>
     <!-- App Header -->
     <header class="header">
         <div class="container">
-            <div class="flex items-center justify-between md:py-9 py-4">
+            <div class="flex items-center justify-between py-4 md:py-9">
                 <!-- Hamburger Icon -->
                 <div class="block md:hidden">
                     <svg class="size-6 text-Primary">
@@ -129,39 +137,39 @@
                 </div>
                 <!-- Logo -->
                 <span>
-                    <svg class="md:w-38.75 w-25.5 md:h-12.75 h-8">
+                    <svg class="w-25.5 md:w-38.75 h-8 md:h-12.75">
                         <use href="#logo-type"></use>
                     </svg>
                 </span>
                 <!-- Nav Links -->
-                <nav class="md:block hidden">
+                <nav class="hidden md:block">
                     <ul
-                        class="flex items-center lg:gap-x-6 gap-x-3 *:text-gray-700 *:font-Dana lg:*:text-xl *:h-8 *:flex *:items-center text-base">
+                        class="flex *:flex items-center *:items-center gap-x-3 lg:gap-x-6 *:h-8 *:font-Dana *:text-gray-700 text-base lg:*:text-xl">
                         <li class="nav__active--link">
                             <a href="#">صفحه اصلی</a>
                         </li>
-                        <li class="gap-x-1 relative group cursor-pointer">
+                        <li class="relative cursor-pointer group gap-x-1">
                             <span>شعبه</span>
                             <svg class="size-4">
                                 <use href="#chevron-down-mini"></use>
                             </svg>
                             <!-- Drop Down -->
                             <div
-                                class="absolute transition-all delay-100 group-hover:opacity-100 group-hover:visible opacity-0 invisible top-[calc(100%+10px)] left-0 w-36 rounded-sm divide-y px-2 divide-gray-300 shadow-drop-down *:h-10 *:w-full *:flex *:items-center lg:*:text-sm *:text-xs *:text-gray-800">
+                                class="group-hover:visible invisible top-[calc(100%+10px)] left-0 z-10 absolute *:flex *:items-center bg-white opacity-0 group-hover:opacity-100 shadow-drop-down px-2 rounded-sm divide-y divide-gray-300 w-36 *:w-full *:h-10 *:text-gray-800 *:text-xs lg:*:text-sm transition-all delay-100">
                                 <a href="#">اکباتان</a>
                                 <a href="#">چالوس</a>
                                 <a href="#">اقدسیه</a>
                                 <a href="#">ونک</a>
                             </div>
                         </li>
-                        <li class="gap-x-1 relative group cursor-pointer">
+                        <li class="relative cursor-pointer group gap-x-1">
                             <span>منو</span>
                             <svg class="size-4">
                                 <use href="#chevron-down-mini"></use>
                             </svg>
                             <!-- Drop Down -->
                             <div
-                                class="absolute transition-all delay-100 group-hover:opacity-100 group-hover:visible opacity-0 invisible top-[calc(100%+10px)] right-0 w-36 rounded-sm divide-y px-2 divide-gray-300 shadow-drop-down *:h-10 *:w-full *:flex *:items-center lg:*:text-sm *:text-xs *:text-gray-800">
+                                class="group-hover:visible invisible top-[calc(100%+10px)] right-0 z-10 absolute *:flex *:items-center bg-white opacity-0 group-hover:opacity-100 shadow-drop-down px-2 rounded-sm divide-y divide-gray-300 w-36 *:w-full *:h-10 *:text-gray-800 *:text-xs lg:*:text-sm transition-all delay-100">
                                 <a href="#">غذای اصلی</a>
                                 <a href="#">پیش غذا</a>
                                 <a href="#">دسر</a>
@@ -180,22 +188,22 @@
                     </ul>
                 </nav>
                 <!-- Buttons -->
-                <div class="flex items-center md:gap-x-2 gap-x-1">
+                <div class="flex items-center gap-x-1 md:gap-x-2">
                     <!-- Profile -->
                     <button
-                        class="flex items-center justify-center cursor-pointer md:size-8 lg:size-10 size-6 rounded-sm bg-Tint-1 text-Primary">
+                        class="flex items-center justify-center rounded-sm cursor-pointer max-lg:hidden bg-Tint-1 size-10 text-Primary">
                         <svg class="size-4 md:size-5 lg:size-6">
                             <use href="#magnifying-glass"></use>
                         </svg>
                     </button>
                     <button
-                        class="flex items-center justify-center cursor-pointer md:size-8 lg:size-10 size-6 rounded-sm bg-Tint-1 text-Primary">
+                        class="flex items-center justify-center rounded-sm cursor-pointer lg:order-last bg-Tint-1 size-6 md:size-8 lg:size-10 text-Primary">
                         <svg class="size-4 md:size-5 lg:size-6">
                             <use href="#user"></use>
                         </svg>
                     </button>
                     <button
-                        class="flex items-center justify-center cursor-pointer size-10 max-lg:hidden rounded-sm bg-Tint-1 text-Primary">
+                        class="flex items-center justify-center rounded-sm cursor-pointer max-lg:order-first bg-Tint-1 size-6 md:size-8 lg:size-10 text-Primary">
                         <svg class="size-4 md:size-5 lg:size-6">
                             <use href="#shopping-cart"></use>
                         </svg>
@@ -204,6 +212,99 @@
             </div>
         </div>
     </header>
+    <!-- App Main -->
+    <main>
+        <section class="mb-4 md:mb-12 hero-section">
+            <div class="mySwiper swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="relative flex items-center justify-center bg-green-800 bg-hero h-44 sm:h-84">
+
+                            <!-- Title & Button -->
+                            <div class="flex flex-col items-center gap-y-4 md:gap-y-10 pt-5.25 md:pt-7">
+                                <h1 class="font-Morabba-Bold text-Tint-1 lg:text-[40px] text-base sm:text-2xl">تجربه
+                                    غذای سالم و
+                                    گیاهی به سبک
+                                    ترخینه</h1>
+                                <button
+                                    class="flex items-center bg-Primary px-2 sm:px-4 lg:px-8 rounded-lg h-6 sm:h-8 lg:h-10 font-Dana text-[10px] text-white sm:text-base lg:text-lg">
+                                    <a href="#">سفارش آنلاین عذا</a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="relative flex items-center justify-center bg-green-800 bg-hero h-44 sm:h-84">
+
+                            <!-- Title & Button -->
+                            <div class="flex flex-col items-center gap-y-4 md:gap-y-10 pt-5.25 md:pt-7">
+                                <h1 class="font-Morabba-Bold text-Tint-1 lg:text-[40px] text-base sm:text-2xl">فست فود
+                                    های گیاهی</h1>
+                                <button
+                                    class="flex items-center bg-Primary px-2 sm:px-4 lg:px-8 rounded-lg h-6 sm:h-8 lg:h-10 font-Dana text-[10px] text-white sm:text-base lg:text-lg">
+                                    <a href="#">سفارش آنلاین عذا</a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="relative flex items-center justify-center bg-green-800 bg-hero h-44 sm:h-84">
+
+                            <!-- Title & Button -->
+                            <div class="flex flex-col items-center gap-y-4 md:gap-y-10 pt-5.25 md:pt-7">
+                                <h1 class="font-Morabba-Bold text-Tint-1 lg:text-[40px] text-base sm:text-2xl">غذایی به
+                                    سبک گیاه خواران</h1>
+                                <button
+                                    class="flex items-center bg-Primary px-2 sm:px-4 lg:px-8 rounded-lg h-6 sm:h-8 lg:h-10 font-Dana text-[10px] text-white sm:text-base lg:text-lg">
+                                    <a href="#">سفارش آنلاین عذا</a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="relative flex items-center justify-center bg-green-800 bg-hero h-44 sm:h-84">
+
+                            <!-- Title & Button -->
+                            <div class="flex flex-col items-center gap-y-4 md:gap-y-10 pt-5.25 md:pt-7">
+                                <h1 class="font-Morabba-Bold text-Tint-1 lg:text-[40px] text-base sm:text-2xl">نوشیدنی
+                                    های گیاهی از دل طبیعت</h1>
+                                <button
+                                    class="flex items-center bg-Primary px-2 sm:px-4 lg:px-8 rounded-lg h-6 sm:h-8 lg:h-10 font-Dana text-[10px] text-white sm:text-base lg:text-lg">
+                                    <a href="#">سفارش آنلاین عذا</a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slider Pagination -->
+                <div
+                    class="hero__page--swiper !bottom-1.25 !translate-x-1/2 !left-1/2 !right-1/2 md:bottom-2.5 absolute flex items-center justify-center z-50 gap-x-1 *:!bg-gray-500 *:!rounded-full md:*:!size-2 *:!size-1 *:!transition-all *:!m-0">
+                </div>
+                <!-- Rect Angle Desktop -->
+                <svg class="absolute bottom-0 z-40 translate-x-1/2 left-1/2 right-1/2 max-md:hidden" width="154"
+                    height="33" viewBox="0 0 154 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M13.1492 12.9957C15.3255 5.56588 21.9046 0 29.6466 0H125.118C132.571 0 138.998 5.16164 141.261 12.2634C144.25 21.6506 148.867 33 153.711 33C161.97 33 -9.49755 33 0.41389 33C6.07606 33 10.4444 22.2302 13.1492 12.9957Z"
+                        fill="white" />
+                </svg>
+                <!-- Rect Angle Mobile -->
+                <svg class="z-40 md:hidden block -bottom-[.5px] left-1/2 right-1/2 absolute translate-x-1/2" width="82"
+                    height="19" viewBox="0 0 82 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M81.1819 18.9086C71.5188 15.7635 70.945 0 60.783 0H20.1709C9.93327 0 10.3917 19 0.153999 19C-4.24391 19 87.0571 19 81.7796 19C81.5654 19 81.3665 18.9687 81.1819 18.9086Z"
+                        fill="white" />
+                </svg>
+            </div>
+        </section>
+        
+
+    </main>
+
+
+    <!-- Link Swiper Js -->
+    <script src="../node_modules/swiper/swiper-bundle.min.js"></script>
+    <!-- Link Index Script -->
+    <script src="scripts/index.js" type="module"></script>
 </body>
 
 </html>
