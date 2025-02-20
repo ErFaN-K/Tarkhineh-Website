@@ -119,6 +119,10 @@
   /* Remove 2x Breake Point */
   --breakpoint-2xl: initial;
   --breakpoint-xs: 27.5rem;
+
+  
+  /* Font Size */
+  --text-custom: 0.625rem;
 }
 
 @utility container {
@@ -142,6 +146,13 @@
 
   .bg-hero {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.568) 50%, transparent 100%), url(../images/Hero-Background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .bg-feature { 
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.734) 50%, transparent 100%), url(../images/Features-Background.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
