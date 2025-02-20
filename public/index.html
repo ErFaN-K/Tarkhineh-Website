@@ -145,8 +145,11 @@
             <path stroke-linecap="round" stroke-linejoin="round"
                 d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
         </symbol>
-
-
+        <symbol id="chevron-left-mini" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd"
+                d="M11.78 5.22a.75.75 0 0 1 0 1.06L8.06 10l3.72 3.72a.75.75 0 1 1-1.06 1.06l-4.25-4.25a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.06 0Z"
+                clip-rule="evenodd" />
+        </symbol>
     </svg>
     <!-- App Header -->
     <header class="header">
@@ -315,7 +318,7 @@
                         fill="white" />
                 </svg>
                 <!-- Rect Angle Mobile -->
-                <svg class="z-40 md:hidden block -bottom-[.5px] left-1/2 right-1/2 absolute translate-x-1/2" width="82"
+                <svg class="z-40 md:hidden block -bottom-[2px] left-1/2 right-1/2 absolute translate-x-1/2" width="82"
                     height="19" viewBox="0 0 82 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M81.1819 18.9086C71.5188 15.7635 70.945 0 60.783 0H20.1709C9.93327 0 10.3917 19 0.153999 19C-4.24391 19 87.0571 19 81.7796 19C81.5654 19 81.3665 18.9687 81.1819 18.9086Z"
@@ -338,10 +341,9 @@
                     </button>
                 </div>
                 <!-- Title -->
-                <h2 class="text-base text-center text-gray-800 font-Dana-SemiBold md:text-2xl">منوی رستوران</h2>
+                <h2 class="section__title">منوی رستوران</h2>
                 <!-- Box Container -->
-                <div
-                    class="grid grid-cols-2 mt-18 md:mt-38 gap-y-26.5 md:gap-y-40 gap-x-4 md:grid-cols-3 lg:grid-cols-4">
+                <div class="grid grid-cols-2 mt-18 md:mt-38 gap-y-26.5 md:gap-y-40 gap-x-4 lg:grid-cols-4">
                     <!-- Box -->
                     <div class="flex flex-col items-center h-20 rounded-sm md:h-40 bg-Primary">
                         <img src="./images/menu/Menu-Main-Food.png" alt="Menu Image"
@@ -382,7 +384,7 @@
             </div>
         </section>
         <section class="mb-4 features-section md:mb-12">
-            <div class="px-4 py-4 bg-feature md:px-12 md:py-12">
+            <div class="py-4 bg-feature md:py-12">
                 <div class="container">
                     <div class="flex flex-wrap items-center justify-between max-xl:justify-center gap-y-6">
                         <!-- Content -->
@@ -444,8 +446,91 @@
                 </div>
             </div>
         </section>
+        <section class="mb-4 md:mb-12 branch-section">
+            <div class="container">
+                <!-- Title -->
+                <h1 class="section__title">ترخینه گردی</h1>
+                <!-- Box Container -->
+                <div
+                    class="grid grid-cols-1 mt-3 gap-y-3 gap-x-6 max-xl:gap-x-4 md:grid-cols-2 lg:grid-cols-4 md:mt-6 place-items-center">
+                    <div
+                        class="flex flex-row w-full delay-100 border border-gray-400 rounded-lg md:flex-col hover:border-Primary">
+                        <img src="./images/branch/branch-image.png" class="max-md:min-w-36 max-md:max-h-20">
+                        <div class="flex flex-col items-center w-full p-2 text-center md:px-2 md:py-4 gap-y-1">
+                            <h3 class="text-sm text-gray-800 md:text-xl font-Morabba-Bold">شعبه اکباتان</h3>
+                            <p
+                                class="text-gray-700 text-custom md:text-sm font-Dana h-8 md:h-12.5 flex items-center md:mb-2">
+                                شهرک اکباتان، فاز ۳، مجتمع تجاری کوروش، طبقه سوم</p>
+                            <button
+                                class="flex items-center justify-center w-32 h-8 border rounded-sm gap-x-1 max-md:hidden border-Primary text-Primary">
+                                <a href="#" class="text-xs font-Dana">صفحه شعبه</a>
+                                <svg class="size-4">
+                                    <use href="#chevron-left-mini"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div
+                        class="flex flex-row w-full delay-100 border border-gray-400 rounded-lg md:flex-col hover:border-Primary">
+                        <img src="./images/branch/branch-image.png" class="max-md:min-w-36 max-md:max-h-20">
+                        <div class="flex flex-col items-center w-full p-2 text-center md:px-2 md:py-4 gap-y-1">
+                            <h3 class="text-sm text-gray-800 md:text-xl font-Morabba-Bold">شعبه چالوس</h3>
+                            <p
+                                class="text-gray-700 text-custom md:text-sm font-Dana h-8 md:h-12.5 flex items-center md:mb-2">
+                                چالوس، خیابان ۱۷ شهریور، بعد کوچه کوروش، جنب داروخانه دکتر میلانی</p>
+                            <button
+                                class="flex items-center justify-center w-32 h-8 border rounded-sm gap-x-1 max-md:hidden border-Primary text-Primary">
+                                <a href="#" class="text-xs font-Dana">صفحه شعبه</a>
+                                <svg class="size-4">
+                                    <use href="#chevron-left-mini"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div
+                        class="flex flex-row w-full delay-100 border border-gray-400 rounded-lg md:flex-col hover:border-Primary">
+                        <img src="./images/branch/branch-image.png" class="max-md:min-w-36 max-md:max-h-20">
+                        <div class="flex flex-col items-center w-full p-2 text-center md:px-2 md:py-4 gap-y-1">
+                            <h3 class="text-sm text-gray-800 md:text-xl font-Morabba-Bold">شعبه اقدسیه</h3>
+                                <p
+                                    class="text-gray-700 text-custom md:text-sm font-Dana h-8 md:h-12.5 flex items-center md:mb-2">
+                                    خیابان اقدسیه ، نرسیده به میدان خیام، پلاک ۸</p>
+                                <button
+                                    class="flex items-center justify-center w-32 h-8 border rounded-sm gap-x-1 max-md:hidden border-Primary text-Primary">
+                                    <a href="#" class="text-xs font-Dana">صفحه شعبه</a>
+                                    <svg class="size-4">
+                                        <use href="#chevron-left-mini"></use>
+                                    </svg>
+                                </button>
+                        </div>
+                    </div>
+                    <div
+                        class="flex flex-row w-full delay-100 border border-gray-400 rounded-lg md:flex-col hover:border-Primary">
+                        <img src="./images/branch/branch-image.png" class="max-md:min-w-36 max-md:max-h-20">
+                        <div class="flex flex-col items-center w-full p-2 text-center md:px-2 md:py-4 gap-y-1">
+                            <h3 class="text-sm text-gray-800 md:text-xl font-Morabba-Bold">شعبه ونک</h3>
+                            <p
+                                class="text-gray-700 text-custom md:text-sm font-Dana h-8 md:h-12.5 flex items-center md:mb-2">
+                                میدان ونک، خیابان فردوسی، نبش کوچه نیلوفر، پلاک ۲۶</p>
+                            <button
+                                class="flex items-center justify-center w-32 h-8 border rounded-sm gap-x-1 max-md:hidden border-Primary text-Primary">
+                                <a href="#" class="text-xs font-Dana">صفحه شعبه</a>
+                                <svg class="size-4">
+                                    <use href="#chevron-left-mini"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-
+    <!-- App Footer -->
+    <footer>
+        <div class="container">
+            <div class="pt-4 md:py-8 pb-5.5"></div>
+        </div>
+    </footer>
 
     <!-- Link Swiper Js -->
     <script src="../node_modules/swiper/swiper-bundle.min.js"></script>

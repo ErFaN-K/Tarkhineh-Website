@@ -176,4 +176,8 @@
   .swiper-pagination-bullet-active {
     @apply md:!size-3 !size-2 !bg-Primary !m-0
   }
+
+  .section__title { 
+    @apply text-base text-center text-gray-800 font-Dana-SemiBold md:text-2xl
+  }
 }
