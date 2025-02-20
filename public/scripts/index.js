@@ -6,6 +6,8 @@ let heroSectionSwiperConfig = new Swiper('.mySwiper', {
     },
     grabCursor: true,
     effect: "fade",
-    autoPlay: true,
+    autoplay: {
+        delay: 5000
+    },
     loop: true,
 })

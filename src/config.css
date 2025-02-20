@@ -120,7 +120,7 @@
   --breakpoint-2xl: initial;
   --breakpoint-xs: 27.5rem;
 
-  
+
   /* Font Size */
   --text-custom: 0.625rem;
 }
@@ -145,20 +145,35 @@
   }
 
   .bg-hero {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.568) 50%, transparent 100%), url(../images/Hero-Background.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
 
-  .bg-feature { 
+  .bg-hero--1 {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.568) 50%, transparent 100%), url(../images/Hero-Background-1.png);
+  }
+
+  .bg-hero--2 {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.568) 50%, transparent 100%), url(../images/Hero-Background-2.png);
+  }
+
+  .bg-hero--3 {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.568) 50%, transparent 100%), url(../images/Hero-Background-3.png);
+  }
+
+  .bg-hero--4 {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.568) 50%, transparent 100%), url(../images/Hero-Background-4.png);
+  }
+
+  .bg-feature {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.734) 50%, transparent 100%), url(../images/Features-Background.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
 
-  .swiper-pagination-bullet-active { 
-    @apply md:!size-3 !size-2 !bg-Primary !m-0 
+  .swiper-pagination-bullet-active {
+    @apply md:!size-3 !size-2 !bg-Primary !m-0
   }
 }
